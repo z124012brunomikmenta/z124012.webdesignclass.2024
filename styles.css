@@ -1,0 +1,186 @@
+@charset "UTF-8";
+html{
+    box-sizing: border-box;
+    overflow-x: hidden; /*brute force fix on a problem causing the page to create a giant blank space on the right;
+    wasn't able to fix for other devices*/
+}
+*{
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+/*grid separated into header, main part and footer*/
+#container{
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color:#9547B6;
+}
+
+
+a:focus, a:hover, a:active{
+    color: #FFFFFF;
+}
+
+main a{
+    text-decoration:underline;
+}
+
+strong{
+    color: #B92D2D;
+}
+
+main{
+    grid-row: 2 / 3;
+    grid-template-columns: 1 / -1;
+    background-color: #9999FF;
+}
+
+header{
+    background-color: #003366;
+    grid-row: 1 / 2;
+    grid-template-columns: 1 / -1;
+    font-family: Blippo, fantasy;
+    font-size: larger;
+    text-shadow: .12em .12em #5C2473;
+}
+
+footer{
+    background-color: #003366;
+    grid-row: 3 / 4;
+    grid-template-columns: 1 / -1;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-top: 3em;
+    margin-left: 5%;
+    text-shadow: .03em .03em;
+}
+
+h3{
+    margin-left: 5%;
+}
+
+ul#default{
+    list-style-type: circle;
+    margin-left: 5em;
+
+}
+
+ul#ordered{
+    list-style-type:decimal;
+    margin-left: 5%;
+}
+
+ul#faq{
+    list-style-type: circle;
+    margin-left: 5em;
+}
+
+ul#faq li{
+    margin-bottom: 1em;
+}
+
+/*use flex display for the header menu items*/
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    font-size: 1.5em;
+}
+
+nav ul li a{
+    padding: .5em .2em;
+    margin: 1em;
+}
+
+p{
+    text-align: justify;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    margin-top: 0em;
+}
+
+/*normal text goes in the middle of the screen*/
+p.description{
+    margin-right: 5%;
+}
+
+p.conclusion{
+    margin-top: 0em;
+    margin-right: 25%;
+}
+
+
+main img{
+    border: 2px solid #000000;
+}
+
+
+#logo{
+    position: relative;
+    left: 36.8em;   
+}
+
+#pfp{
+    position: relative;
+    left: 38em;
+}
+
+#imgKumon{
+    float: right;
+    position: relative;
+    transform: scale(.8);
+    margin-right: 10%;
+    right: 2em;
+    bottom: 4em;
+}
+
+
+#imgDog{
+    float: left;
+    position: relative;
+    transform: scale(0.9);
+    margin-right: 2em;
+    margin-left: 5%;
+}
+
+#imgItsu{
+    position: relative;
+    left: 35%;
+}
+
+#imgSD{
+    position: relative;
+    left: 37%;
+}
+
+#imgMT{
+    position: relative;
+    left: 35%;
+}
